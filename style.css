@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content: centre;
+    align-items: centre;
+}
+.game-container{
+    width: min(95vww,500px);
+    height: 500px;
+    border: 2px solid black;
+}
+#game-board{
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(20,1fr);
+    grid-template-columns: repeat(20,1fr);
+    background-color: rgb(226, 168, 97);
+}
