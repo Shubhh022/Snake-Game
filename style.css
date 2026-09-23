@@ -2,36 +2,43 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
 body {
-    font-family: Arial, sans-serif;
     min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightpink;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
+
+    font-family: Arial, sans-serif;
 }
 
+
 .game-container {
-    max-width: 600px;
-    width: 100%;
-    background-color:lavender;
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    width: min(95vw, 500px);
 }
 
 #game-board {
     width: 100%;
-    aspect-ratio: 1/1 ;
+    aspect-ratio: 1;
+
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    background-color: lightyellow
-    ;
+
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+
+    border: 3px solid #640404;
+}
+
+.cell {
+    border: 1px solid #ddd;
+}
+
+.snake {
+    background: rgb(109, 130, 223);
+}
+
+.head {
+    background: rgb(227, 89, 172);
 }
