@@ -28,7 +28,7 @@ body {
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(20, 1fr);
 
-    border: 3px solid #640404;
+    border: 3px solid #d40909;
 }
 
 .cell {
@@ -36,9 +36,36 @@ body {
 }
 
 .snake {
-    background: rgb(109, 130, 223);
+    background: rgb(180, 67, 198);
 }
 
 .head {
-    background: rgb(227, 89, 172);
+    background: rgb(62, 225, 214);
+}
+button {
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.controls {
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+.controls button {
+    margin: 3px;
+
+    width: 50px;
+    height: 45px;
+
+    font-size: 20px;
+}
+.food {
+    background: red;
+    border-radius: 50%;
 }

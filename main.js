@@ -1,4 +1,5 @@
 import { Game } from './game.js';
+import { setupInput } from './input.js';
 
 const board = document.getElementById('game-board');
 
@@ -51,14 +52,24 @@ const Render = () => {
                         "head"
                     );
 
-                }
-
-            }
+                }});
+   // Food
+    // Get the cell corresponding to the food's position
+    const foodCell =
+        board.querySelector(
+            `[data-x="${game.food.x}"][data-y="${game.food.y}"]`
         );
 
+    if (foodCell) {
+
+        foodCell.classList.add(
+            "food"
+        );
+
+    }
 
 
-}
+};
 
 const startGame = () => {
     clearInterval(interval);
@@ -96,7 +107,14 @@ const startGame = () => {
 
         game.speed
     );
+    setupInput(direction => {
 
+            game.setDirection(
+                direction
+            );
+
+        }
+    );
 
 }
 
