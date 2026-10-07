@@ -12,11 +12,15 @@ body {
     align-items: center;
 
     font-family: Arial, sans-serif;
-}
 
+    background: #111827;
+    color: white;
+}
 
 .game-container {
     width: min(95vw, 500px);
+
+    text-align: center;
 }
 
 #game-board {
@@ -28,20 +32,39 @@ body {
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(20, 1fr);
 
-    border: 3px solid #d40909;
+    border: 3px solid #38bdf8;
+    border-radius: 10px;
+
+    background: #1f2937;
+
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
+
+    overflow: hidden;
 }
 
 .cell {
-    border: 1px solid #ddd;
+    border: 1px solid #374151;
 }
 
 .snake {
-    background: rgb(180, 67, 198);
+    background: #a855f7;
+    border-radius: 4px;
 }
 
 .head {
-    background: rgb(62, 225, 214);
+    background: #22d3ee;
+    border-radius: 5px;
+
+    box-shadow: 0 0 8px #22d3ee;
 }
+
+.food {
+    background: #ef4444;
+    border-radius: 50%;
+
+    box-shadow: 0 0 10px #ef4444;
+}
+
 button {
     padding: 10px 15px;
 
@@ -49,6 +72,18 @@ button {
     border-radius: 6px;
 
     cursor: pointer;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: scale(1.05);
 }
 
 .controls {
@@ -65,7 +100,7 @@ button {
 
     font-size: 20px;
 }
-.food {
-    background: red;
-    border-radius: 50%;
+
+.controls button:active {
+    transform: scale(0.95);
 }
